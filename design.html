@@ -5,71 +5,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play </title>
+    <title>Tic Tac Toe </title>
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 
-<body >
+<body>
 
 
     <!-- audio part  -->
-    <audio  id="myAudio"><source src="music.mp3" type="audio/mpeg"></audio> 
-    <audio id="win_sound"><source src="win.wav" type="audio/mpeg"> </audio> 
-    <audio id="lose_sound"><source src="lose.wav" type="audio/mpeg"> </audio> 
+    <audio id="myAudio">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win_sound">
+        <source src="win.wav" type="audio/mpeg">
+    </audio>
+    <audio id="lose_sound">
+        <source src="lose.wav" type="audio/mpeg">
+    </audio>
 
-      
-       
+    <button onclick="playAudio()" class="btn btn-danger m-5" type="button"> <i class="bi bi-volume-up-fill"></i></button>
+    <button onclick="pauseAudio()" type="button" class="btn btn-danger m-5"> <i class="bi bi-volume-mute-fill"></i></button>
+    <!-- body  -->
+    <div class="  justify-content-center">
+        <h1 class="text-center mb-5" style="color:#EE9516;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif "> &#9995; &#128512; Hello dear ,
+           welcome Tic Tac Toe game ! </h1>
+       <div class="player_box">
+           <div class="container d-flex  ">
+                   <input type="text" class="form-control player1" id="inputPassword2" placeholder="player1"value="">
+                   <h1 class="col-4 text-center">VS</h1>
+                   <input type="text" class="form-control player2" id="inputPassword2" placeholder="player2"value="">
+           </div>
+          <div class="container text-center"><input type="button" class="go btn  go w-25 m-2" value ="go"></div>
+     </div>
+       <div class="container  text-center d-flex">
+           <div class="col-6"> <h1 class="p1" style="color:#BB2D3B;
+               font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></h1>
+               <h1 class="score_palyer1"> </h1>
+           </div>
+           
+           <div class="col-6"><h1  class="p2" style="color:#BB2D3B;
+               font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></h1> 
+               <h1 class="score_palyer2"></h1>
+           </div>
+       </div>
+        <div class="container d-none box">
+            
+            <div class="row f-flex justify-content-center ">
+                <input type="button" value=""
+                    class="square zero  shadow  col-2  border-0  m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square one   shadow  col-2  border-0   m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square  two  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
 
-      <button onclick="playAudio()"  class="btn btn-danger m-5" type="button"> <i class="bi bi-pause-fill"></i></button>
-<button onclick="pauseAudio()" type="button" class="btn btn-danger m-5" > <i class="bi bi-play"></i></button> 
-      <!-- body  -->
-    <div class="  justify-content-center  ">
-         <div class="container  mt-5 "  >
+            </div>
+
+            <div class="row f-flex justify-content-center ">
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+            </div>
 
 
-             <h1 class="text-center   m-5"  style="color:#FF6C00;
-             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
-             >  &#9995; &#128512; Hello  dear ,  welcome to tic tac game ! </h1>
+            <div class="row f-flex justify-content-center ">
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+                <input type="button" value=""
+                    class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center" />
+            </div>
+            <h1 class="text-center     m-5" style="color:#EE9516;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">good luck </h1>
 
-                    <div class="row f-flex justify-content-center ">
-                        <input type="button" value="" class="square zero  shadow  col-2  border-0     m-2 d-flex justify-content-center align-items-center" />
-                        <input type="button" value="" class="square one   shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                        <input type="button" value="" class="square  two  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
+        </div>
 
-                  </div>
-
-                    <div class="row f-flex justify-content-center ">
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                    </div>
-               
-                    
-                    <div class="row f-flex justify-content-center ">
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                        <input type="button" value="" class="square  shadow  col-2  border-0    m-2 d-flex justify-content-center align-items-center"/>
-                    </div>    
-                    <h1 class="text-center     m-5"  style="color:#FF6C00;
-                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
-                    >good luck </h1>
 
     </div>
+    <div class="res d-flex  flex-column justify-content-center w-50 d-none position-absolute   text-center  "
+        style="left: 25%;top:25%; background-color: #FF6C00; height: 70%;">
+        <h1 class="phrase"></h1>
+        <h1 class="result text-warning">BRAVO YOU WIN</h1>
 
-   
+        <input type="button" class="btn btn-dark    my-5 restart" value="restart  &#128259;" />
     </div>
- <div class="res d-flex  flex-column justify-content-center w-50 d-none position-absolute   text-center  " style="left: 25%;top:15%; background-color: #FF6C00; height: 60%;" >
-    <h1 class="phrase"></h1>
-    <h1 class="result text-warning">BRAVO YOU WIN</h1>
-
-    <input type="button" class="btn btn-dark    my-5 restart" value="restart  &#128259;"/>
-</div>
- <script src="move.js"></script>
+    <script src="move.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
