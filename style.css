@@ -1,0 +1,11 @@
+.square{
+    width: 150px;
+    height: 150px ;
+    font-size: 60px;
+}
+body{
+
+    background-image: url('https://img.freepik.com/free-vector/kids-zone-background_24908-60439.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
