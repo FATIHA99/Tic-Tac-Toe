@@ -8,6 +8,7 @@ let winner;
 var win;
 var nbr_squares_clicked=0;
 var x = document.getElementById("myAudio"); 
+var click_sound = document.getElementById("click"); 
 var w=document.getElementById("win_sound"); 
 var l=document.getElementById("lose_sound"); 
 var player1="";
@@ -61,6 +62,9 @@ function clearBox() {
 function playAudio() { 
     x.play(); 
   } 
+  function click_s() { 
+    click_sound.play(); 
+  } 
 
   function pauseAudio() { 
     x.pause(); 
@@ -76,6 +80,7 @@ function playAudio() {
 for (let i = 0; i < squares.length; i++) {
     squares[i].addEventListener('click', (e) => {
         click++;
+        click_s();
         if (click % 2 == 0) {
             if (squares[i].value == "X") {
                 squares[i].classList.add("bg-warning");

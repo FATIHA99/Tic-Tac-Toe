@@ -21,6 +21,9 @@
     <audio id="myAudio">
         <source src="music.mp3" type="audio/mpeg">
     </audio>
+    <audio id="click">
+        <source src="click.wav" type="audio/mpeg">
+    </audio>
     <audio id="win_sound">
         <source src="win.wav" type="audio/mpeg">
     </audio>
@@ -28,34 +31,38 @@
         <source src="lose.wav" type="audio/mpeg">
     </audio>
 
-    <button onclick="playAudio()" class="btn btn-danger m-5" type="button"> <i class="bi bi-volume-up-fill"></i></button>
-    <button onclick="pauseAudio()" type="button" class="btn btn-danger m-5"> <i class="bi bi-volume-mute-fill"></i></button>
+    <button onclick="playAudio()" class="btn btn-danger m-5" type="button"> <i
+            class="bi bi-volume-up-fill"></i></button>
+    <button onclick="pauseAudio()" type="button" class="btn btn-danger m-5"> <i
+            class="bi bi-volume-mute-fill"></i></button>
     <!-- body  -->
     <div class="  justify-content-center">
         <h1 class="text-center mb-5" style="color:#EE9516;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif "> &#9995; &#128512; Hello dear ,
-           welcome Tic Tac Toe game ! </h1>
-       <div class="player_box">
-           <div class="container d-flex  ">
-                   <input type="text" class="form-control player1" id="inputPassword2" placeholder="player1"value="">
-                   <h1 class="col-4 text-center">VS</h1>
-                   <input type="text" class="form-control player2" id="inputPassword2" placeholder="player2"value="">
-           </div>
-          <div class="container text-center"><input type="button" class="go btn  go w-25 m-2" value ="go"></div>
-     </div>
-       <div class="container  text-center d-flex">
-           <div class="col-6"> <h1 class="p1" style="color:#BB2D3B;
+            welcome Tic Tac Toe game ! </h1>
+        <div class="player_box">
+            <div class="container d-flex  ">
+                <input type="text" class="form-control player1" id="inputPassword2" placeholder="player1" value="">
+                <h1 class="col-4 text-center">VS</h1>
+                <input type="text" class="form-control player2" id="inputPassword2" placeholder="player2" value="">
+            </div>
+            <div class="container text-center"><input type="button" class="go btn  go w-25 m-2" value="go"></div>
+        </div>
+        <div class="container  text-center d-flex">
+            <div class="col-6">
+                <h1 class="p1" style="color:#BB2D3B;
                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></h1>
-               <h1 class="score_palyer1"> </h1>
-           </div>
-           
-           <div class="col-6"><h1  class="p2" style="color:#BB2D3B;
-               font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></h1> 
-               <h1 class="score_palyer2"></h1>
-           </div>
-       </div>
+                <h1 class="score_palyer1"> </h1>
+            </div>
+
+            <div class="col-6">
+                <h1 class="p2" style="color:#BB2D3B;
+               font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"></h1>
+                <h1 class="score_palyer2"></h1>
+            </div>
+        </div>
         <div class="container d-none box">
-            
+
             <div class="row f-flex justify-content-center ">
                 <input type="button" value=""
                     class="square zero  shadow  col-2  border-0  m-2 d-flex justify-content-center align-items-center" />
